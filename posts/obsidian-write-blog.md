@@ -1,8 +1,10 @@
 ---
 title: "Obsidian写博客文章"
-tags: obsidian, blog
+tags: [obsidian,blog]
 date: 2023-08-29T14:02:53+08:00
 draft: false
+hideInList: false
+isTop: false
 image-auto-upload: true
 ---
 
@@ -61,6 +63,7 @@ feature:
 ---
 ```
 - 安装插件QuickAdd，设置如下
+
 输入框中输入 new blog，点击 Add Choice，就如下：
 ![image.png](https://images-1256934664.cos.ap-nanjing.myqcloud.com/notes/20230830162606.png)
 
