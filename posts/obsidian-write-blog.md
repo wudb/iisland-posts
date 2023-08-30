@@ -75,7 +75,7 @@ feature:
 - 图片管理主要使用PicGo 和 Image Auto Upload Plugin插件，设置完成后粘贴就会自动上传和显示
 
 ## 变体
-> 不想 blog 和普通笔记分开两个obsidian 库，所以实现了这个变体。两个库的问题是ob 插件也是两份，设置也是两份
+> 不想 blog 和普通笔记分开两个obsidian 库，所以实现了这个变体。两个库的问题是ob 插件也是两份，设置也是两份。
 
 - 将 iisland中的 content 文件夹单独成一个github 仓库iisland-posts(需要将 iisland-posts 设置成 Public，否则 cloudflare 不能读取)
 - 然后将 iisland-posts 仓库作为 iisland 和 普通笔记仓库的 submodule
