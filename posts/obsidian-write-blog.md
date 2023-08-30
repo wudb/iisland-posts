@@ -83,7 +83,8 @@ feature:
 - iisland 仓库拉取最新子模块 iisland-posts，然后提交更新到 iisland，cloudflare 将自动构建
 
 ## 问题
-将博客文章单独成子仓库后，每次提交的步骤有些繁琐，需要先提交子仓库，再在博客仓库更新子仓库后再提交更新。本可以通过使用*Obsidian Git*插件自动提交到 github，现在暂未实现。
+将博客文章单独成子仓库后，每次提交的步骤有些繁琐，需要先提交子仓库，再在博客仓库更新子仓库后再提交更新。
+可以通过使用*Obsidian Git*插件自动提交到 github，然后再去博客 iisland 仓库拉取更新并提交。
 
 #### 参考
 [将Hugo博客部署到Cloudflare Pages上的体验与踩坑小记](https://tutuis.me/deploy-blog-to-cloudflare-pages/)  
