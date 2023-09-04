@@ -1,0 +1,16 @@
+name: Blog Content Update Trigger
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger parent repository update 
+        run: |
+          curl -X POST https://api.github.com/repos/wudb/iisland/dispatches \
+          -H 'Accept: application/vnd.github.everest-preview+json' \
+          -u smallstepman:${{ secrets.ACCESS_TOKEN }} \
+          --data '{"event_type": "content_update_trigger", "client_payload": { "repository": "iisland-posts" }}'
