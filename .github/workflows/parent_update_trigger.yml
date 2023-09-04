@@ -12,5 +12,5 @@ jobs:
         run: |
           curl -X POST https://api.github.com/repos/wudb/iisland/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
-          -u smallstepman:${{ secrets.ACCESS_TOKEN }} \
+          -u wudb:${{ secrets.ACCESS_TOKEN }} \
           --data '{"event_type": "content_update_trigger", "client_payload": { "repository": "iisland-posts" }}'
