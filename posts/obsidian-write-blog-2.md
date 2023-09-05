@@ -2,7 +2,7 @@
 title: "Obsidian写博客文章二：自动构建问题"
 tags: [obsidian,blog]
 date: 2023-08-29 18:09:29
-draft: true
+draft: false
 hideInList: false
 isTop: false
 feature:
@@ -96,3 +96,5 @@ Github 的项目 settings 里面，找到 Secrets and variables里的 Actions，
 [GitHub Actions 快速入门 - GitHub 文档](https://docs.github.com/zh/actions/quickstart)  
 [触发工作流的事件 - GitHub 文档](https://docs.github.com/zh/actions/using-workflows/events-that-trigger-workflows#repository_dispatch) 
 [Repositories - GitHub Docs](https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#create-a-repository-dispatch-event)  
+[trigger\_submodule\_pull.yml](https://github.com/smallstepman/github-actions-submodule-test-parent/blob/main/.github/workflows/trigger_submodule_pull.yml)  
+[trigger\_parent\_update.yml](https://github.com/smallstepman/github-actions-submodule-test-child/blob/main/.github/workflows/trigger_parent_update.yml)  
