@@ -84,4 +84,6 @@ jobs:
 ```
 
 secrets.ACCESS_TOKEN 的设置
-Github 的项目 settings 里面，找到 Secrets and variables里的 Actions，点击 New reposio
+Github 的项目 settings 里面，找到 Secrets and variables里的 Actions，点击 New repository secret，Name 里面填入*ACCESS_TOKEN*，Secret 里面填入Personal Access Tokens
+
+如此，就可以实现zi'ku
