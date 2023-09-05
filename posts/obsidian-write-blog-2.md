@@ -24,4 +24,29 @@ feature:
 现在这种结构下 submodule 的更新，母库不知道，所以就没法实现自动 push，自动构建发布文章了。
 
 ## 解决方案
-实现方案主要基于 Github 的 workflow，实际上是通过监听子库的 push 动作，然后子库通过 Github 接口发送*repository_dispatch*事件，母库接收子库发出的事件，然后更新
+实现方案主要基于 Github 的 workflow，通过监听子库的 push 动作，子库通过 Github 接口发送*repository_dispatch*事件。母库接收子库发出的事件，更新子库。
+
+**iisland-posts(子库) workflow**
+```yaml
+name: Blog Content Update Trigger
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger parent repository update 
+        run: |
+          curl -L \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/wudb/iisland/dispatches \
+            -d '{"event_type":"content_update_trigger","client_payload":{"message": "${{ github.event.head_commit.message }}" }}'
+```
+
+****
