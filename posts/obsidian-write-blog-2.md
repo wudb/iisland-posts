@@ -45,7 +45,7 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            # OWNER/REPO 替换成自己的仓库 s
+            # OWNER/REPO 替换成自己的仓库
             https://api.github.com/repos/OWNER/REPO/dispatches \  
             -d '{"event_type":"content_update_trigger","client_payload":{"message": "${{ github.event.head_commit.message }}" }}'
 ```
@@ -83,9 +83,11 @@ jobs:
           git push
 ```
 
-zhu
-secrets.ACCESS_TOKEN 的设置
+**注意点：**
+- secrets.ACCESS_TOKEN 的设置
 Github 的项目 settings 里面，找到 Secrets and variables里的 Actions，点击 New repository secret，Name 里面填入*ACCESS_TOKEN*，Secret 里面填入Personal Access Tokens
+
+- Obsidian Git 的间隔时间不宜太短，因为 Github 的 Actions 执行需要一定时间
 
 如此，结合 Obsidian Git 插件就可以实现自动提交，自动构建，发布文章了。
 
