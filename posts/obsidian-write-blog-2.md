@@ -21,6 +21,7 @@ feature:
 
 ## 问题
 如果只有一个库，那就是配置好这个库的 ob插件和设置就可以通过 obsidian git 插件自动 push，然后cloudflare 自动构建发布就 OK 了。
-现在这种结构下 submodule 的更新，母库是不知道，所以就没法实现自动 push，自动构建发布文章了。
+现在这种结构下 submodule 的更新，母库不知道，所以就没法实现自动 push，自动构建发布文章了。
 
 ## 解决方案
+实现方案主要基于 Github 的 workflow，实际上是通过监听子库的 push 动作，字库
