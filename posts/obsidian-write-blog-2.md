@@ -24,4 +24,4 @@ feature:
 现在这种结构下 submodule 的更新，母库不知道，所以就没法实现自动 push，自动构建发布文章了。
 
 ## 解决方案
-实现方案主要基于 Github 的 workflow，实际上是通过监听子库的 push 动作，字库
+实现方案主要基于 Github 的 workflow，实际上是通过监听子库的 push 动作，然后子库通过 Github 接口发送*repository_dispatch*事件，母库接收子库发出的事件，然后更新
