@@ -89,3 +89,4 @@ Github 的项目 settings 里面，找到 Secrets and variables里的 Actions，
 如此，结合 Obsidian Git 插件就可以实现自动提交，自动构建，发布文章了。
 
 ## 调试
+在 Gith
