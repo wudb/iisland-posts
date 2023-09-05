@@ -49,4 +49,35 @@ jobs:
             -d '{"event_type":"content_update_trigger","client_payload":{"message": "${{ github.event.head_commit.message }}" }}'
 ```
 
-****
+**iisland(母库) workflow**
+
+```yaml
+name: Blog Content Updater
+on: 
+    repository_dispatch:
+        types: [content_update_trigger]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event Information
+        run: |
+          echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.message }}'"
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          submodules: true
+      - name: Pull submodule
+        run: |
+          git pull --recurse-submodules
+          git submodule update --init --recursive --remote
+      - name: Push changes
+        run: |
+          git config --global user.name 'wudb'
+          git config --global user.email 'wudebing1105@gmail.com'
+          git add .
+          git commit -m "${{ github.event.client_payload.message }}"
+          git push
+```
