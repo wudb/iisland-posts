@@ -90,4 +90,4 @@ Github 的项目 settings 里面，找到 Secrets and variables里的 Actions，
 
 ## 调试
 在 Github 项目的 Actions 里面就能看到所有 workflow，选择刚新建的 workflow，可以看到 workflow runs，选一个点进去，可以看到workflow 的具体执行信息，点击 build，可以看到具体的 build 步骤，里面有报错以及输出信息。
-注意的点是 build 为绿色代表的只是workflow 没有语法错误，不代表zhi'xi
+注意的点是 build 为绿色代表的只是workflow 没有语法错误，如果没有发现 workflow 执行没有达到预期效果，可以查看 workflow 中 build 的详细信息或日志。
