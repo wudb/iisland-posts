@@ -89,4 +89,5 @@ Github 的项目 settings 里面，找到 Secrets and variables里的 Actions，
 如此，结合 Obsidian Git 插件就可以实现自动提交，自动构建，发布文章了。
 
 ## 调试
-在 Gith
+在 Github 项目的 Actions 里面就能看到所有 workflow，选择刚新建的 workflow，可以看到 workflow runs，选一个点进去，可以看到workflow 的具体执行信息，点击 build，可以看到具体的 build 步骤，里面有报错以及输出信息。
+注意的点是 build 为绿色代表的只是workflow 没有语法错误，不代表zhi'xi
