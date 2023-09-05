@@ -8,4 +8,5 @@ isTop: false
 feature:
 ---
 
-> 针对
+> 针对[[obsidian-write-blog-1]]最后遗留的问题：多仓库同步并自动构建的问题的解决方案，记录于此文。
+
