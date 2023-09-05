@@ -1,5 +1,5 @@
 ---
-title: "Obsidian写博客文章"
+title: "Obsidian写博客文章一：基础工具构建"
 tags: [obsidian,blog]
 date: 2023-08-29T14:02:53+08:00
 draft: false
