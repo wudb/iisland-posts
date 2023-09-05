@@ -45,7 +45,8 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            https://api.github.com/repos/wudb/iisland/dispatches \
+            # OWNER/REPO 替换成自己的仓库 s
+            https://api.github.com/repos/OWNER/REPO/dispatches \  
             -d '{"event_type":"content_update_trigger","client_payload":{"message": "${{ github.event.head_commit.message }}" }}'
 ```
 
@@ -75,9 +76,12 @@ jobs:
           git submodule update --init --recursive --remote
       - name: Push changes
         run: |
-          git config --global user.name 'wudb'
-          git config --global user.email 'wudebing1105@gmail.com'
+          git config --global user.name 'name'
+          git config --global user.email 'xxx@gmail.com'
           git add .
           git commit -m "${{ github.event.client_payload.message }}"
           git push
 ```
+
+secrets.ACCESS_TOKEN 的设置
+Github 的项目 settings 里面，找到 Secrets and variables里的 Actions，点击 New reposio
