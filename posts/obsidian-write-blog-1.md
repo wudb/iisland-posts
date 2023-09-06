@@ -42,7 +42,7 @@ hugo new content posts/my-first-post.md
 - 将本地 blog文件夹 iisland 上传的 github
 
 ## Cloudflare
-- 登录后选择 Workers 和 Pages下的*创建应用程序*
+- 登录后选择 Workers 和 Pages下的*创建应用程序*
 - 选择Pages，连接到 github，选择仓库 iisland
 - 构建选择 hugo就可以了
 - 环境变量添加*HUGO_VERSION=0.117.0*
