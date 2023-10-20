@@ -1,11 +1,15 @@
 ---
-title: "Obsidian写博客文章一：基础工具构建"
-tags: [obsidian,blog]
+title: Obsidian写博客文章一：基础工具构建
+tags:
+  - obsidian
+  - blog
 date: 2023-08-29T14:02:53+08:00
 draft: false
 hideInList: false
 isTop: false
 image-auto-upload: true
+created: 2023-08-30T11:17
+updated: 2023-09-16T11:54
 ---
 
 >缘由：不想使用多个写文章的工具，想集中到 Obsidian 中统一写，所以才有了这次的文章。此文只是记录研究的过程，以便后查。

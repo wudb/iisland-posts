@@ -1,11 +1,15 @@
 ---
-title: "Obsidian写博客文章二：自动构建问题"
-tags: [obsidian,blog]
+title: Obsidian写博客文章二：自动构建问题
+tags:
+  - obsidian
+  - blog
 date: 2023-08-29 18:09:29
 draft: false
 hideInList: false
 isTop: false
-feature:
+feature: 
+created: 2023-09-04T18:19
+updated: 2023-09-16T11:54
 ---
 
 > 针对[Obsidian写博客文章一：基础工具构建 - iIsland](https://iisland.pages.dev/posts/obsidian-write-blog-1/)最后遗留的问题：多仓库同步并自动构建的问题的解决方案，记录于此文。
